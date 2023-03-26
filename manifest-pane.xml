@@ -10,9 +10,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Visitor Management System" />
   <Description DefaultValue="Register external visitors" />
-  <IconUrl DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-64.png" />
+  <IconUrl DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon.png" />
   <HighResolutionIconUrl
-    DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-128.png" />
+    DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon.png" />
   <SupportUrl DefaultValue="https://www.k-business.com" />
   <AppDomains>
     <AppDomain>https://localhost:3000</AppDomain>
@@ -67,9 +67,9 @@
                       <Description resid="VMSLocButton.Description" />
                     </Supertip>
                     <Icon>
-                      <bt:Image size="16" resid="Icon.16" />
-                      <bt:Image size="32" resid="Icon.32" />
-                      <bt:Image size="80" resid="Icon.80" />
+                      <bt:Image size="16" resid="Icon" />
+                      <bt:Image size="32" resid="Icon" />
+                      <bt:Image size="80" resid="Icon" />
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
                       <SourceLocation resid="LocPane.Url" />
@@ -83,16 +83,8 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16"
-            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-16.png" />
-          <bt:Image id="Icon.32"
-            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-32.png" />
-          <bt:Image id="Icon.64"
-            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-64.png" />
-          <bt:Image id="Icon.80"
-            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-80.png" />
-          <bt:Image id="Icon.128"
-            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-128.png" />
+          <bt:Image id="Icon"
+            DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon.png" />
         </bt:Images>
         <bt:Urls>
           <bt:Url id="LocPane.Url"
