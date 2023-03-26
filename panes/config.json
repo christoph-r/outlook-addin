@@ -1,0 +1,19 @@
+{
+  "locations": [
+    {
+      "name": "Wienerberg",
+      "description": "Standort Wienerberg",
+      "email": "Wienerberg@vms.com"
+    },
+    {
+      "name": "Graz",
+      "description": "Standort Graz",
+      "email": "Graz@vms.com"
+    },
+    {
+      "name": "Linz",
+      "description": "Standort Linz",
+      "email": "Linz@vms.com"
+    }
+  ]
+}
