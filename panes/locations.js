@@ -21,9 +21,9 @@ Office.onReady((info) => {
 /**
  * Used to test in browser.
  */
-$(document ).ready(function() {
-  initialize();
-});
+//$(document ).ready(function() {
+//  initialize();
+//});
 
 /**
  * Initialize list from location configuration json.
