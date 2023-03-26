@@ -4,16 +4,16 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
-  <Id>c2c560d2-91ce-4f59-883a-f6fff90e5db2</Id>
+  <Id>c2c560d2-91ce-4f59-883a-f6fff90e5db1</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>K-Businesscom AG</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Visitor Management System" />
   <Description DefaultValue="Register external visitors" />
   <IconUrl
-    DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-64.png" />
+    DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-64.png" />
   <HighResolutionIconUrl
-    DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-128.png" />
+    DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-128.png" />
   <SupportUrl DefaultValue="https://www.k-business.com" />
   <AppDomains>
     <AppDomain>
@@ -31,7 +31,7 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/pane/locations.html" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/pane/locations.html" />
         <RequestedHeight>
           250</RequestedHeight>
       </DesktopSettings>
@@ -83,19 +83,19 @@
     <Resources>
       <bt:Images>
         <bt:Image id="Icon.16"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-16.png" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-16.png" />
         <bt:Image id="Icon.32"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-32.png" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-32.png" />
         <bt:Image id="Icon.64"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-64.png" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-64.png" />
         <bt:Image id="Icon.80"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-80.png" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-80.png" />
         <bt:Image id="Icon.128"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/assets/vms-icon-128.png" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/assets/vms-icon-128.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Taskpane.Url"
-          DefaultValue="https://raw.githubusercontent.com/christoph-r/outlook-addin/main/pane/locations.html" />
+          DefaultValue="https://christoph-r.github.io/outlook-addin/pane/locations.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="CommandsGroup.Label" DefaultValue="VMS Add-in" />
