@@ -1,9 +1,12 @@
-// Initialize the Office Add-in.
-Office.onReady(() => {
-  // If needed, Office.js is ready to be called
-});
+let item;
 
-// The command function.
+Office.initialize = function () {
+    item = Office.context.mailbox.item;
+    $(document).ready(function () {
+    });
+}
+
+// Add location to recipients
 async function addLocation(event) {
 
     if (item.itemType == Office.MailboxEnums.ItemType.Appointment) {
@@ -25,4 +28,4 @@ async function addLocation(event) {
 }
 
 // You must register the function with the following line.
-Office.actions.associate("addLocation", highlightSelection);
+Office.actions.associate("addLocation", addLocation);
