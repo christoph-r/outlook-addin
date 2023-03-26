@@ -9,24 +9,22 @@
 
 <body>
     <p>This add-in will insert the text 'Hello world!' in a new message.</p>
-    <button id="helloButton">Say hello</button>
+    <button onclick="addLocation('pansy@contoso.com')">Add pansy@contoso.com</button>
+    <br/>
+    <button onclick="addLocation('3333@contoso.com')">Add 3333@contoso.com</button>
+    <br/>
+        <button onclick="addLocation('3tztr@contoso.com')">Add 3tztr@contoso.com</button>
+    <br/>
 </body>
 
 <script>
-    Office.onReady((info) => {
-        if (info.host === Office.HostType.Outlook) {
-            document.getElementById("helloButton").onclick = sayHello;
-        }
-    });
+    Office.onReady((info) => {});
 
-    /**
-     * Writes 'Hello world!' to a new message body.
-     */
-    function sayHello() {
+    function addLocation(locEmail) {
         Office.context.mailbox.item.requiredAttendees.addAsync(
             [{
-                "displayName": "Pansy Valenzuela",
-                "emailAddress": "pansy@contoso.com"
+                "displayName": locEmail,
+                "emailAddress": locEmail
             }],
             function (asyncResult) {
                 if (asyncResult.status == Office.AsyncResultStatus.Failed) {
