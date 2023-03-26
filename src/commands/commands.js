@@ -1,28 +1,18 @@
-let item;
-
-Office.initialize = function () {
-    item = Office.context.mailbox.item;
-    $(document).ready(function () {
-    });
-}
+Office.onReady((info) => {
+});
 
 // Add location to recipients
-async function addLocation(event) {
-
-    if (item.itemType == Office.MailboxEnums.ItemType.Appointment) {
-        item.requiredAttendees.addAsync(
+function addLocation(event) {
+    Office.context.mailbox.item.requiredAttendees.addAsync(
         [{
-            "displayName" : "Pansy Valenzuela",
-            "emailAddress" : "pansy@contoso.com"
-          }],
+            "displayName": "Pansy Valenzuela",
+            "emailAddress": "pansy@contoso.com"
+        }],
         function (asyncResult) {
-            if (asyncResult.status == Office.AsyncResultStatus.Failed){
+            if (asyncResult.status == Office.AsyncResultStatus.Failed) {
                 write(asyncResult.error.message);
             }
-            else {
-               // Calling event.completed is required. event.completed lets the platform know that processing has completed.
-               event.completed();
-            }
+             event.completed();
         }); // End addAsync.
     }
 }
