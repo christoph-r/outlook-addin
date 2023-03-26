@@ -104,7 +104,7 @@
           <bt:String id="VMSLocButton.Title" DefaultValue="Add location registration" />
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="VMSLocButton.Description" DefaultValue="" />
+          <bt:String id="VMSLocButton.Description" DefaultValue="Add location registration" />
         </bt:LongStrings>
       </Resources>
     </VersionOverrides>
