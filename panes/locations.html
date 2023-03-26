@@ -10,27 +10,49 @@
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
     <script type="text/javascript" src="locations.js"></script>
 
-    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
-    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
+
 <body>
-    <fast-card>
-        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('pansy@contoso.com')">
-            <h2>Wienerberg</h2>
-            <p>Wienerbergstraße 22, wien</p>
+<div class="row">
+    <div class="col m6">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Wienerberg</span>
+                <p>Wienerbergstraße 22, wien</p>
+            </div>
+            <div class="card-action">
+                <a href="#" onclick="addLocation('pansy@contoso.com')">Add this location</a>
+            </div>
         </div>
-    </fast-card>
-    <fast-card>
-        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('3333@contoso.com')">
-            <h2>Wienerberg</h2>
-            <p>Wienerbergstraße 22, wien</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col m6">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Wienerberg 3tztr</span>
+                <p>Wienerbergstraße 22, wien</p>
+            </div>
+            <div class="card-action">
+                <a href="#" onclick="addLocation('3tztr@contoso.com')">Add this location</a>
+            </div>
         </div>
-    </fast-card>
-    <fast-card>
-        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('3tztr@contoso.com')">
-            <h2>Wienerberg</h2>
-            <p>Wienerbergstraße 22, wien</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col m6">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Wienerberg 3333</span>
+                <p>Wienerbergstraße 22, wien</p>
+            </div>
+            <div class="card-action">
+                <a href="#" onclick="addLocation('3333@contoso.com')">Add this location</a>
+            </div>
         </div>
-    </fast-card>
+    </div>
+</div>
 </body>
 </html>
