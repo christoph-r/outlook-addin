@@ -63,7 +63,7 @@
                   <Control xsi:type="Button" id="msgComposeInsertGist">
                     <Label resid="VMSLocButton.Label" />
                     <Supertip>
-                      <Title resid="VMSLocButton.Description" />
+                      <Title resid="VMSLocButton.Title" />
                       <Description resid="VMSLocButton.Description" />
                     </Supertip>
                     <Icon>
@@ -101,8 +101,11 @@
         <bt:ShortStrings>
           <bt:String id="VMSGroup.Label" DefaultValue="Visitormanagement" />
           <bt:String id="VMSLocButton.Label" DefaultValue="Add Location" />
-          <bt:String id="VMSLocButton.Description" DefaultValue="Add location registration" />
+          <bt:String id="VMSLocButton.Title" DefaultValue="Add location registration" />
         </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="VMSLocButton.Description" DefaultValue="" />
+        </bt:LongStrings>
       </Resources>
     </VersionOverrides>
   </VersionOverrides>
