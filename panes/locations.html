@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+
+<body>
+    <p>This add-in will insert the text 'Hello world!' in a new message.</p>
+    <button onclick="addLocation('pansy@contoso.com')">Add pansy@contoso.com</button>
+    <br />
+    <button onclick="addLocation('3333@contoso.com')">Add 3333@contoso.com</button>
+    <br />
+    <button onclick="addLocation('3tztr@contoso.com')">Add 3tztr@contoso.com</button>
+    <br />
+</body>
+
+<script type="text/javascript" >
+    Office.onReady((info) => { });
+
+    function addLocation(locEmail) {
+        Office.context.mailbox.item.requiredAttendees.addAsync(
+            [{
+                "displayName": locEmail, 
+                "emailAddress": locEmail
+            }],
+            function (asyncResult) {
+                if (asyncResult.status == Office.AsyncResultStatus.Failed) {
+                    write(asyncResult.error.message);
+                }
+            });
+    }
+</script>
+</html>
