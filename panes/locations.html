@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visitor Management</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script type="text/javascript" src="locations.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
 </head>
-
 <body>
-    <p>This add-in will insert the text 'Hello world!' in a new message.</p>
-    <button onclick="addLocation('pansy@contoso.com')">Add pansy@contoso.com</button>
-    <br />
-    <button onclick="addLocation('3333@contoso.com')">Add 3333@contoso.com</button>
-    <br />
-    <button onclick="addLocation('3tztr@contoso.com')">Add 3tztr@contoso.com</button>
-    <br />
+    <fast-card>
+        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('pansy@contoso.com')">
+            <h2>Wienerberg</h2>
+            <p>Wienerbergstraße 22, wien</p>
+        </div>
+    </fast-card>
+    <fast-card>
+        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('3333@contoso.com')">
+            <h2>Wienerberg</h2>
+            <p>Wienerbergstraße 22, wien</p>
+        </div>
+    </fast-card>
+    <fast-card>
+        <div style="cursor: pointer; padding: 0 1em; 1em; color: var(--neutral-foreground-rest);" onclick="addLocation('3tztr@contoso.com')">
+            <h2>Wienerberg</h2>
+            <p>Wienerbergstraße 22, wien</p>
+        </div>
+    </fast-card>
 </body>
-
-<script type="text/javascript" >
-    Office.onReady((info) => { });
-
-    function addLocation(locEmail) {
-        Office.context.mailbox.item.requiredAttendees.addAsync(
-            [{
-                "displayName": locEmail, 
-                "emailAddress": locEmail
-            }],
-            function (asyncResult) {
-                if (asyncResult.status == Office.AsyncResultStatus.Failed) {
-                    write(asyncResult.error.message);
-                }
-            });
-    }
-</script>
 </html>
