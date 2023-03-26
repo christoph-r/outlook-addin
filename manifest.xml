@@ -95,8 +95,7 @@
                           <Description resid="location1Label" />
                         </Supertip>
                         <Action xsi:type="ExecuteFunction">
-                          <FunctionName>
-                            getItemID</FunctionName>
+                          <FunctionName>addLocation</FunctionName>
                         </Action>
                       </Item>
                       <Item id="location2">
@@ -106,8 +105,7 @@
                           <Description resid="location1Label" />
                         </Supertip>
                         <Action xsi:type="ExecuteFunction">
-                          <FunctionName>
-                            getItemID</FunctionName>
+                          <FunctionName>addLocation</FunctionName>
                         </Action>
                       </Item>
                     </Items>
