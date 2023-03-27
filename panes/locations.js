@@ -49,7 +49,7 @@ function printLocations(filter){
 
     locList.forEach(loc => {
         var card = '<div class="row" style="margin:1em">';
-        card += '<div class="card" style="cursor: pointer;" onclick="addLocationRecipient(\'' + loc.email + '\')">';
+        card += '<div class="card" style="cursor: pointer;" onclick="addLocationRecipient(\'' + loc.name + '\',\'' + loc.email + '\')">';
         card += '<div class="card-content"><span class="card-title">' + loc.name + '</span><p>' + loc.description + '</p></div>';
         card += '</div></div>';
         $("#locations").append(card)
@@ -69,10 +69,12 @@ function printLocations(filter){
  * Adds the location email as recipient to the appointment.
  * @param {*} locEmail 
  */
-function addLocationRecipient(locEmail) {
+function addLocationRecipient(locName, locEmail) {
+    console.log("adding recipient: " + locName + " " + locEmail);
+    
     Office.context.mailbox.item.requiredAttendees.addAsync(
         [{
-            "displayName": locEmail,
+            "displayName": locName,
             "emailAddress": locEmail
         }],
         function (asyncResult) {
@@ -86,7 +88,7 @@ function addLocationRecipient(locEmail) {
 
 function showMessage(msg) {
      $("#banner").append('<div class="teal lighten-2" style="padding: 0.5em; margin:1em">' + msg + '</div>');
-    setTimeout(function() { $("#banner").empty()}, 3000);
+    setTimeout(function() { $("#banner").empty()}, 5000);
 }
 
 function getLocalizedString(key) {
