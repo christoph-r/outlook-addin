@@ -8,7 +8,11 @@ let langBundle = {
     "CHANGE_FILTER_CRITERIA": {
         "en" :"Change the location filter parameters.",
         "de" :"Passen Sie Ihre Filterkriterien an."
-    }
+    },
+    "LOC_ADDED": {
+        "en" :"Location added.",
+        "de" :"Standord hinzugefügt."
+    },
 }
 
 /**
@@ -66,6 +70,7 @@ function printLocations(filter){
  * @param {*} locEmail 
  */
 function addLocationRecipient(locEmail) {
+    showMessage(locEmail)
     Office.context.mailbox.item.requiredAttendees.addAsync(
         [{
             "emailAddress": locEmail
@@ -73,8 +78,15 @@ function addLocationRecipient(locEmail) {
         function (asyncResult) {
             if (asyncResult.status == Office.AsyncResultStatus.Failed) {
                 write(asyncResult.error.message);
+            } else{
+               showMessage(getLocalizedString("LOC_ADDED")); 
             }
         });
+}
+
+function showMessage(msg) {
+     $("#banner").append('<div class="teal lighten-2" style="padding: 0.5em; margin:1em">' + msg + '</div>');
+    setTimeout(function() { $("#banner").empty()}, 3000);
 }
 
 function getLocalizedString(key) {
@@ -84,7 +96,6 @@ function getLocalizedString(key) {
     } catch(e) {
         displayLanguage = "en-us";
     }
-
     var lng = displayLanguage.toLowerCase().startsWith("de-") ? "de" : "en";
 
     return langBundle[key][lng];

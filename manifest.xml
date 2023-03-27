@@ -5,7 +5,7 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
   <Id>c2c560d2-91ce-4f59-883a-f6fff90e5db1</Id>
-  <Version>2.0.0.3</Version>
+  <Version>2.0.0.5</Version>
   <ProviderName>K-Businesscom AG</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Visitor Management System">

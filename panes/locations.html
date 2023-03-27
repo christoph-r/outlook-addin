@@ -8,14 +8,15 @@
 
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
-    <script type="text/javascript" src="../assets/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="locations.js"></script>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="../assets/materialize.min.css">
+    <link rel="stylesheet" href="/assets/materialize.min.css">
 </head>
 
 <body>
+    <div id="banner"></div>
     <div class="row"  style="margin:1em">
         <div class="input-field">
             <input id="search" type="text" placeholder="Filter locations ..."  oninput="printLocations(this.value)">
