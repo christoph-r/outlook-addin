@@ -70,7 +70,6 @@ function printLocations(filter){
  * @param {*} locEmail 
  */
 function addLocationRecipient(locEmail) {
-    showMessage(locEmail)
     Office.context.mailbox.item.requiredAttendees.addAsync(
         [{
             "emailAddress": locEmail
@@ -94,7 +93,7 @@ function getLocalizedString(key) {
     try {
         displayLanguage = Office.context.displayLanguage;
     } catch(e) {
-        displayLanguage = "en-us";
+        displayLanguage = "en-US";
     }
     var lng = displayLanguage.toLowerCase().startsWith("de-") ? "de" : "en";
 
