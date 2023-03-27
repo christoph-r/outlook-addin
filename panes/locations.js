@@ -49,7 +49,7 @@ function printLocations(filter){
 
     locList.forEach(loc => {
         var card = '<div class="row" style="margin:1em">';
-        card += '<div class="card" style="cursor: pointer;" onclick="addLocationRecipient(\'' + loc.email + '\')">';
+        card += '<div class="card" style="cursor: pointer;" onclick="addLocationRecipient(\'' + loc + '\')">';
         card += '<div class="card-content"><span class="card-title">' + loc.name + '</span><p>' + loc.description + '</p></div>';
         card += '</div></div>';
         $("#locations").append(card)
@@ -69,10 +69,11 @@ function printLocations(filter){
  * Adds the location email as recipient to the appointment.
  * @param {*} locEmail 
  */
-function addLocationRecipient(locEmail) {
+function addLocationRecipient(loc) {
     Office.context.mailbox.item.requiredAttendees.addAsync(
         [{
-            "emailAddress": locEmail
+            "displayName": loc.name,
+            "emailAddress": loc.email
         }],
         function (asyncResult) {
             if (asyncResult.status == Office.AsyncResultStatus.Failed) {
@@ -93,7 +94,7 @@ function getLocalizedString(key) {
     try {
         displayLanguage = Office.context.displayLanguage;
     } catch(e) {
-        displayLanguage = "en-US";
+        displayLanguage = "en-us";
     }
     var lng = displayLanguage.toLowerCase().startsWith("de-") ? "de" : "en";
 
